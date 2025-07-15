@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin: 20px 0;
+            color: #333;
+        }
+        .overview, .details {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+        .card h2 {
+            font-size: 16px;
+            padding: 10px;
+            margin: 0;
+            color: #444;
+        }
+        .crop-box {
+            display: flex;
+            flex-wrap: wrap;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .crop-image {
+            flex: 1 1 250px;
+            text-align: center;
+            padding: 10px;
+        }
+        .crop-image img {
+            width: 90%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .crop-image h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        .crop-details {
+            flex: 2 1 300px;
+            padding: 15px 20px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        @media (max-width: 700px) {
+            .crop-box {
+                flex-direction: column;
+            }
+            .crop-image, .crop-details {
+                flex: 1 1 100%;
+            }
+        }
+        .navbar {
+    position: fixed; /* stays on top when scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b2d8b2; /* light green */
+    padding: 10px 20px;
+    box-sizing: border-box; /* ensures padding does not add extra width */
+}
+
+
+.navbar-left h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #2e4d2e; /* dark green for contrast */
+    font-weight: 600;
+}
+
+.navbar-right a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #2e4d2e;
+    font-weight: 500;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 4px;
+}
+
+.navbar-right a:hover {
+    color: #1c331c;
+    border-bottom: 2px solid #1c331c;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-right {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    .navbar-right a {
+        margin: 5px 10px 5px 0;
+    }
+}
+.heading {
+    
+            padding-top:40px;
+            text-align: center;
+            font-size: 32px;
+            margin: 20px 0;
+            color: #333;}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="navbar-left">
+        <h1>AgriGrow</h1>
+    </div>
+    <div class="navbar-right">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="types.html">Types</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+<div class="container">
+    <h1 class="heading">Pulses</h1>
+
+    <div class="overview">
+        <h2>Overview</h2>
+        <p>
+            Pulses are leguminous crops harvested for their dry seeds, providing an essential source of plant-based proteins, dietary fiber, and nutrients. They help in soil fertility through nitrogen fixation, making them a vital component of sustainable farming systems.
+        </p>
+    </div>
+
+    <div class="details">
+        <h2>Details</h2>
+        <p>
+            <strong>Climate & Season:</strong> Grows best in moderate to warm climates with well-distributed rainfall.<br>
+            <strong>Soil:</strong> Well-drained loamy or sandy loam soils.<br>
+            <strong>Watering:</strong> Requires minimal to moderate irrigation based on rainfall.<br>
+            <strong>Fertilizers:</strong> Often needs minimal nitrogen fertilizer due to nitrogen fixation; phosphorus and potash may be applied.<br>
+            <strong>Challenges:</strong> Pest control, moisture management, and disease prevention are essential in pulse cultivation.
+        </p>
+    </div>
+
+    <h2 style="text-align:center; margin-top: 40px;">Detailed Crop Information</h2>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://albertapulse.com/wp-content/uploads/2020/04/Figure-3-Close-up-of-Chickpea-Plant-with-pod-623x1024.jpg" alt="Chickpea">
+        </div>
+        <div class="crop-details">
+            <h1>Chickpea (Gram)</h1>
+            <strong>Overview:</strong> Chickpea is a major rabi pulse, rich in protein, used in various cuisines.<br><br>
+            <strong>Season:</strong> Rabi season, sown in October-November.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils.<br><br>
+            <strong>Growth Cycle:</strong> 100-120 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing using seed drills.<br><br>
+            <strong>Watering:</strong> Requires 1-2 irrigations.<br><br>
+            <strong>Pest Management:</strong> Monitor for pod borers and wilt.<br><br>
+            <strong>Harvest:</strong> Harvest when plants turn yellow and dry.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://www.tropicalpermaculture.com/images/pigeon-pea5.jpg" alt="Pigeon Pea">
+        </div>
+        <div class="crop-details">
+            <h1>Pigeon Pea (Arhar/Tur)</h1>
+            <strong>Overview:</strong> Pigeon pea is a perennial legume used as a pulse and fodder.<br><br>
+            <strong>Season:</strong> Kharif season, sown in June-July.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils.<br><br>
+            <strong>Growth Cycle:</strong> 150-200 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing in rows.<br><br>
+            <strong>Watering:</strong> Requires minimal irrigation.<br><br>
+            <strong>Pest Management:</strong> Monitor for pod borers and wilt.<br><br>
+            <strong>Harvest:</strong> Harvest when pods are dry and brown.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://thumbs.dreamstime.com/b/green-gram-close-up-34270830.jpg" alt="Green Gram">
+        </div>
+        <div class="crop-details">
+            <h1>Green Gram (Moong)</h1>
+            <strong>Overview:</strong> Green gram is a short-duration pulse crop, rich in proteins.<br><br>
+            <strong>Season:</strong> Grown in both Kharif and summer seasons.<br><br>
+            <strong>Soil:</strong> Sandy loam to loam soils.<br><br>
+            <strong>Growth Cycle:</strong> 60-90 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing.<br><br>
+            <strong>Watering:</strong> Requires minimal irrigation.<br><br>
+            <strong>Pest Management:</strong> Monitor for yellow mosaic virus and thrips.<br><br>
+            <strong>Harvest:</strong> Harvest when pods turn black and dry.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://www.agrifarming.in/wp-content/uploads/Ultimate-Guide-to-Black-Gram-Urad-Dal-Farming-4.jpg" alt="Black Gram">
+        </div>
+        <div class="crop-details">
+            <h1>Black Gram (Urad)</h1>
+            <strong>Overview:</strong> Black gram is a protein-rich pulse crop commonly grown in India.<br><br>
+            <strong>Season:</strong> Kharif and summer seasons.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils.<br><br>
+            <strong>Growth Cycle:</strong> 70-90 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing in rows.<br><br>
+            <strong>Watering:</strong> Requires 2-3 irrigations.<br><br>
+            <strong>Pest Management:</strong> Monitor for leaf spots and aphids.<br><br>
+            <strong>Harvest:</strong> Harvest when pods dry and turn black.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://cdn.britannica.com/54/148154-050-91F7CB39/Lentil.jpg" alt="Lentil">
+        </div>
+        <div class="crop-details">
+            <h1>Lentil (Masoor)</h1>
+            <strong>Overview:</strong> Lentil is a winter season pulse, rich in protein and iron.<br><br>
+            <strong>Season:</strong> Rabi season, sown in November.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils.<br><br>
+            <strong>Growth Cycle:</strong> 100-110 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing.<br><br>
+            <strong>Watering:</strong> Requires minimal irrigation.<br><br>
+            <strong>Pest Management:</strong> Monitor for rust and wilt.<br><br>
+            <strong>Harvest:</strong> Harvest when pods turn brown and dry.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://i.etsystatic.com/23209409/r/il/9a8b22/3269606887/il_1588xN.3269606887_8hz6.jpg" alt="Field Pea">
+        </div>
+        <div class="crop-details">
+            <h1>Field Pea (Matar)</h1>
+            <strong>Overview:</strong> Field peas are grown for green vegetables and dry seeds.<br><br>
+            <strong>Season:</strong> Rabi season, sown in October-November.<br><br>
+            <strong>Soil:</strong> Loamy soils with good drainage.<br><br>
+            <strong>Growth Cycle:</strong> 90-120 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing.<br><br>
+            <strong>Watering:</strong> Requires 2-3 irrigations.<br><br>
+            <strong>Pest Management:</strong> Monitor for powdery mildew and aphids.<br><br>
+            <strong>Harvest:</strong> Harvest when pods are full and mature.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://thumbs.dreamstime.com/b/lobia-plant-seeds-dolichos-branches-275151326.jpg" alt="Cowpea">
+        </div>
+        <div class="crop-details">
+            <h1>Cowpea (Lobia)</h1>
+            <strong>Overview:</strong> Cowpea is a drought-tolerant pulse used for vegetables and dry seeds.<br><br>
+            <strong>Season:</strong> Kharif and summer seasons.<br><br>
+            <strong>Soil:</strong> Sandy loam soils.<br><br>
+            <strong>Growth Cycle:</strong> 70-90 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing in rows.<br><br>
+            <strong>Watering:</strong> Requires minimal watering.<br><br>
+            <strong>Pest Management:</strong> Monitor for aphids and mosaic virus.<br><br>
+            <strong>Harvest:</strong> Harvest when pods turn dry.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://thumbs.dreamstime.com/b/horse-gram-plant-growing-terrace-garden-home-closeup-254479393.jpg" alt="Horse Gram">
+        </div>
+        <div class="crop-details">
+            <h1>Horse Gram (Kulthi)</h1>
+            <strong>Overview:</strong> Horse gram is a hardy pulse crop grown in dryland conditions.<br><br>
+            <strong>Season:</strong> Kharif season, sown in June-July.<br><br>
+            <strong>Soil:</strong> Sandy loam to loamy soils.<br><br>
+            <strong>Growth Cycle:</strong> 100-120 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing.<br><br>
+            <strong>Watering:</strong> Requires minimal irrigation.<br><br>
+            <strong>Pest Management:</strong> Monitor for leaf spot and rust.<br><br>
+            <strong>Harvest:</strong> Harvest when pods are dry and brown.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://paulmaguirephoto.com/photo/broad-bean-plant/f40705.jpg" alt="Broad Bean">
+        </div>
+        <div class="crop-details">
+            <h1>Broad Bean (Fava Bean)</h1>
+            <strong>Overview:</strong> Broad bean is a cool-season pulse rich in proteins and fiber.<br><br>
+            <strong>Season:</strong> Winter season.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils.<br><br>
+            <strong>Growth Cycle:</strong> 120-150 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing.<br><br>
+            <strong>Watering:</strong> Requires moderate irrigation.<br><br>
+            <strong>Pest Management:</strong> Monitor for aphids and chocolate spot.<br><br>
+            <strong>Harvest:</strong> Harvest when pods are fully developed.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://www.shutterstock.com/image-illustration/bengal-gram-plant-260nw-232091620.jpg" alt="Bengal Gram">
+        </div>
+        <div class="crop-details">
+            <h1>Bengal Gram (Desi Chana)</h1>
+            <strong>Overview:</strong> Bengal gram is widely grown for its protein-rich seeds.<br><br>
+            <strong>Season:</strong> Rabi season, sown in October-November.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils.<br><br>
+            <strong>Growth Cycle:</strong> 100-120 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing.<br><br>
+            <strong>Watering:</strong> Requires 1-2 irrigations.<br><br>
+            <strong>Pest Management:</strong> Monitor for pod borers and blight.<br><br>
+            <strong>Harvest:</strong> Harvest when plants dry and pods mature.
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

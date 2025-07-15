@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetables</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin: 20px 0;
+            color: #333;
+        }
+        .overview, .details {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+        .card h2 {
+            font-size: 16px;
+            padding: 10px;
+            margin: 0;
+            color: #444;
+        }
+        .crop-box {
+            display: flex;
+            flex-wrap: wrap;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .crop-image {
+            flex: 1 1 250px;
+            text-align: center;
+            padding: 10px;
+        }
+        .crop-image img {
+            width: 90%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .crop-image h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        .crop-details {
+            flex: 2 1 300px;
+            padding: 15px 20px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        @media (max-width: 700px) {
+            .crop-box {
+                flex-direction: column;
+            }
+            .crop-image, .crop-details {
+                flex: 1 1 100%;
+            }
+        }
+        .navbar {
+    position: fixed; /* stays on top when scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b2d8b2; /* light green */
+    padding: 10px 20px;
+    box-sizing: border-box; /* ensures padding does not add extra width */
+}
+
+
+.navbar-left h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #2e4d2e; /* dark green for contrast */
+    font-weight: 600;
+}
+
+.navbar-right a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #2e4d2e;
+    font-weight: 500;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 4px;
+}
+
+.navbar-right a:hover {
+    color: #1c331c;
+    border-bottom: 2px solid #1c331c;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-right {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    .navbar-right a {
+        margin: 5px 10px 5px 0;
+    }
+}
+.heading {
+    
+            padding-top:40px;
+            text-align: center;
+            font-size: 32px;
+            margin: 20px 0;
+            color: #333;}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="navbar-left">
+        <h1>AgriGrow</h1>
+    </div>
+    <div class="navbar-right">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="types.html">Types</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+<div class="container">
+    <h1 class="heading">Vegetables</h1>
+
+    <div class="overview">
+        <h2>Overview</h2>
+        <p>
+            Vegetables are essential for a balanced diet, providing vitamins, minerals, and fiber. They can be cultivated throughout the year and are a crucial source of income for small and large farmers alike, contributing to food security and nutrition.
+        </p>
+    </div>
+
+    <div class="details">
+        <h2>Details</h2>
+        <p>
+            <strong>Climate & Season:</strong> Grown in varied climates depending on the vegetable, with some suited for summer and others for winter.<br>
+            <strong>Soil:</strong> Well-drained, fertile loamy soils rich in organic matter.<br>
+            <strong>Watering:</strong> Requires regular watering, especially during flowering and fruiting stages.<br>
+            <strong>Fertilizers:</strong> Organic manure and balanced NPK fertilizers ensure healthy growth.<br>
+            <strong>Challenges:</strong> Managing pests, diseases, and ensuring timely irrigation and harvesting are crucial for quality produce.
+        </p>
+    </div>
+
+    <h2 style="text-align:center; margin-top: 40px;">Detailed Crop Information</h2>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://cdn.apartmenttherapy.info/image/fetch/f_auto,q_auto:eco/https:%2F%2Fstorage.googleapis.com%2Fgen-atmedia%2F3%2F2016%2F08%2Fe09c923cc814f6716efcf86ea582df420836a913.jpeg" alt="Tomato">
+        </div>
+        <div class="crop-details">
+            <h1>Tomato</h1>
+            <strong>Overview:</strong> Tomatoes are a widely consumed vegetable used in various cuisines worldwide.<br><br>
+            <strong>Season:</strong> Grown throughout the year, preferably during cool seasons.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils rich in organic matter.<br><br>
+            <strong>Growth Cycle:</strong> 90-120 days.<br><br>
+            <strong>Seed Cycle:</strong> Nursery raising and transplanting after 25-30 days.<br><br>
+            <strong>Watering:</strong> Regular watering, avoiding waterlogging.<br><br>
+            <strong>Pest Management:</strong> Monitor for fruit borers and leaf curl virus.<br><br>
+            <strong>Harvest:</strong> Harvest when fruits are firm and red.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://c1.peakpx.com/wallpaper/628/383/664/food-potato-vegetables-potatoes-wallpaper.jpg" alt="Potato">
+        </div>
+        <div class="crop-details">
+            <h1>Potato</h1>
+            <strong>Overview:</strong> Potatoes are a major vegetable crop used as a staple in many cuisines.<br><br>
+            <strong>Season:</strong> Best grown during the Rabi season.<br><br>
+            <strong>Soil:</strong> Loose, well-drained sandy loam soils.<br><br>
+            <strong>Growth Cycle:</strong> 90-120 days.<br><br>
+            <strong>Seed Cycle:</strong> Propagated using tubers.<br><br>
+            <strong>Watering:</strong> Requires consistent moisture, especially during tuber formation.<br><br>
+            <strong>Pest Management:</strong> Monitor for late blight and aphids.<br><br>
+            <strong>Harvest:</strong> Harvest when leaves turn yellow and plants dry.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://thumbs.dreamstime.com/b/top-view-cabbage-filed-vertical-composition-310230243.jpg" alt="Cabbage">
+        </div>
+        <div class="crop-details">
+            <h1>Cabbage</h1>
+            <strong>Overview:</strong> Cabbage is a leafy vegetable rich in vitamins and fiber.<br><br>
+            <strong>Season:</strong> Grown during cool seasons, mainly in winter.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils with high organic content.<br><br>
+            <strong>Growth Cycle:</strong> 90-120 days.<br><br>
+            <strong>Seed Cycle:</strong> Nursery raising and transplanting after 30-40 days.<br><br>
+            <strong>Watering:</strong> Requires regular irrigation.<br><br>
+            <strong>Pest Management:</strong> Monitor for cabbage worms and aphids.<br><br>
+            <strong>Harvest:</strong> Harvest when heads are firm and compact.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://rukminim1.flixcart.com/image/832/832/jrkyfm80/plant-seed/u/z/8/150-brinjal-green-round-12-seeds-pack-of-50-seeds-x-3-packet-original-imafbwfzsy2wc3gs.jpeg?q=70" alt="Brinjal">
+        </div>
+        <div class="crop-details">
+            <h1>Brinjal (Eggplant)</h1>
+            <strong>Overview:</strong> Brinjal is a versatile vegetable used in various dishes globally.<br><br>
+            <strong>Season:</strong> Can be grown year-round, best in warm seasons.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils.<br><br>
+            <strong>Growth Cycle:</strong> 120-150 days.<br><br>
+            <strong>Seed Cycle:</strong> Nursery raising and transplanting after 30-35 days.<br><br>
+            <strong>Watering:</strong> Requires consistent watering.<br><br>
+            <strong>Pest Management:</strong> Monitor for fruit and shoot borers.<br><br>
+            <strong>Harvest:</strong> Harvest when fruits are tender and glossy.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://gardenerspath.com/wp-content/uploads/2020/03/Carrots-Picked-and-Lying-on-the-Soil.jpg" alt="Carrot">
+        </div>
+        <div class="crop-details">
+            <h1>Carrot</h1>
+            <strong>Overview:</strong> Carrots are root vegetables rich in beta-carotene and vitamins.<br><br>
+            <strong>Season:</strong> Grown in cool seasons.<br><br>
+            <strong>Soil:</strong> Loose, sandy loam soils free from stones.<br><br>
+            <strong>Growth Cycle:</strong> 90-120 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing.<br><br>
+            <strong>Watering:</strong> Requires regular watering.<br><br>
+            <strong>Pest Management:</strong> Monitor for aphids and root-knot nematodes.<br><br>
+            <strong>Harvest:</strong> Harvest when roots attain proper size and color.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://media.istockphoto.com/id/174844302/photo/okra.jpg?s=612x612&w=0&k=20&c=R598vlRWlMzHgnQwy1vWejhZow3vNTYFmUTSXZcn8Kk=" alt="Okra">
+        </div>
+        <div class="crop-details">
+            <h1>Okra (Lady's Finger)</h1>
+            <strong>Overview:</strong> Okra is a warm-season vegetable used widely in cooking.<br><br>
+            <strong>Season:</strong> Grown in warm seasons.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils.<br><br>
+            <strong>Growth Cycle:</strong> 90-100 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing.<br><br>
+            <strong>Watering:</strong> Requires regular watering.<br><br>
+            <strong>Pest Management:</strong> Monitor for shoot and fruit borers.<br><br>
+            <strong>Harvest:</strong> Harvest when pods are tender.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://dotsonsfarm.com/wp-content/uploads/2020/04/cauliflower.jpg" alt="Cauliflower">
+        </div>
+        <div class="crop-details">
+            <h1>Cauliflower</h1>
+            <strong>Overview:</strong> Cauliflower is a cool-season vegetable rich in vitamins and minerals.<br><br>
+            <strong>Season:</strong> Best grown in winter.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils.<br><br>
+            <strong>Growth Cycle:</strong> 100-120 days.<br><br>
+            <strong>Seed Cycle:</strong> Nursery raising and transplanting.<br><br>
+            <strong>Watering:</strong> Requires frequent irrigation.<br><br>
+            <strong>Pest Management:</strong> Monitor for cabbage worms and aphids.<br><br>
+            <strong>Harvest:</strong> Harvest when heads are firm and compact.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://s3.amazonaws.com/homestead-acres.com/wp-content/uploads/2018/04/29153048/Baby-Spinach-Plant.jpg" alt="Spinach">
+        </div>
+        <div class="crop-details">
+            <h1>Spinach</h1>
+            <strong>Overview:</strong> Spinach is a leafy vegetable rich in iron and vitamins.<br><br>
+            <strong>Season:</strong> Can be grown throughout the year.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils.<br><br>
+            <strong>Growth Cycle:</strong> 40-60 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing.<br><br>
+            <strong>Watering:</strong> Requires regular watering.<br><br>
+            <strong>Pest Management:</strong> Monitor for leaf miners and aphids.<br><br>
+            <strong>Harvest:</strong> Harvest when leaves are tender.
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

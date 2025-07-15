@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spices</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin: 20px 0;
+            color: #333;
+        }
+        .overview, .details {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+        .card h2 {
+            font-size: 16px;
+            padding: 10px;
+            margin: 0;
+            color: #444;
+        }
+        .crop-box {
+            display: flex;
+            flex-wrap: wrap;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .crop-image {
+            flex: 1 1 250px;
+            text-align: center;
+            padding: 10px;
+        }
+        .crop-image img {
+            width: 90%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .crop-image h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        .crop-details {
+            flex: 2 1 300px;
+            padding: 15px 20px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        @media (max-width: 700px) {
+            .crop-box {
+                flex-direction: column;
+            }
+            .crop-image, .crop-details {
+                flex: 1 1 100%;
+            }
+        }
+        .navbar {
+    position: fixed; /* stays on top when scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b2d8b2; /* light green */
+    padding: 10px 20px;
+    box-sizing: border-box; /* ensures padding does not add extra width */
+}
+
+
+.navbar-left h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #2e4d2e; /* dark green for contrast */
+    font-weight: 600;
+}
+
+.navbar-right a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #2e4d2e;
+    font-weight: 500;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 4px;
+}
+
+.navbar-right a:hover {
+    color: #1c331c;
+    border-bottom: 2px solid #1c331c;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-right {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    .navbar-right a {
+        margin: 5px 10px 5px 0;
+    }
+}
+.heading {
+    
+            padding-top:40px;
+            text-align: center;
+            font-size: 32px;
+            margin: 20px 0;
+            color: #333;}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="navbar-left">
+        <h1>AgriGrow</h1>
+    </div>
+    <div class="navbar-right">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="types.html">Types</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+    <div class="container">
+    <h1 class="heading">Spices</h1>
+
+    <div class="overview">
+        <h2>Overview</h2>
+        <p>
+            Spices are aromatic parts of plants used to flavor, color, and preserve food while providing medicinal benefits. India is one of the largest producers and exporters of spices, and these crops contribute significantly to farmers' income and the agri-economy.
+        </p>
+    </div>
+
+    <div class="details">
+        <h2>Details</h2>
+        <p>
+            <strong>Climate & Season:</strong> Generally require warm and humid climates with specific variations for each spice.<br>
+            <strong>Soil:</strong> Well-drained loamy to sandy loam soils enriched with organic matter.<br>
+            <strong>Watering:</strong> Requires moderate watering based on crop type and stage.<br>
+            <strong>Fertilizers:</strong> Organic manure along with balanced NPK fertilizers supports healthy growth.<br>
+            <strong>Challenges:</strong> Pest and disease management, moisture maintenance, and post-harvest handling are essential for quality spice production.
+        </p>
+    </div>
+
+    <h2 style="text-align:center; margin-top: 40px;">Detailed Crop Information</h2>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://cdn.shopify.com/s/files/1/0488/7855/1202/products/black_pepper_wpepp_2000x.jpg?v=1652758278" alt="Black Pepper">
+        </div>
+        <div class="crop-details">
+            <h1>Black Pepper</h1>
+            <strong>Overview:</strong> Black pepper, known as the “King of Spices”, is used for flavoring and has medicinal value.<br><br>
+            <strong>Season:</strong> Best planted during the monsoon season.<br><br>
+            <strong>Soil:</strong> Well-drained laterite and clay loam soils.<br><br>
+            <strong>Growth Cycle:</strong> Takes 3-4 years for the first harvest.<br><br>
+            <strong>Seed Cycle:</strong> Propagated through cuttings and rooted in nurseries.<br><br>
+            <strong>Watering:</strong> Requires adequate moisture, especially during flowering and berry formation.<br><br>
+            <strong>Pest Management:</strong> Monitor for pollu beetle and foot rot.<br><br>
+            <strong>Harvest:</strong> Harvest when berries begin to turn red; dry in the sun.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://www.bhg.com/thmb/j3aNhsKOnSnSWYG_kYt_cTwtxRM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-96403803-bhg-cardamom-773a5047cf0646c6be051ca105a9135c.jpg" alt="Cardamom">
+        </div>
+        <div class="crop-details">
+            <h1>Cardamom</h1>
+            <strong>Overview:</strong> Cardamom is an aromatic spice used for flavoring and in medicines.<br><br>
+            <strong>Season:</strong> Planting is done during the monsoon season.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils rich in organic matter.<br><br>
+            <strong>Growth Cycle:</strong> Starts yielding from the third year onward.<br><br>
+            <strong>Seed Cycle:</strong> Propagated using seeds or rhizomes.<br><br>
+            <strong>Watering:</strong> Requires high humidity and regular watering.<br><br>
+            <strong>Pest Management:</strong> Monitor for thrips and shoot borers.<br><br>
+            <strong>Harvest:</strong> Harvest when capsules turn green and mature.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.MM4ZwtXD82cRwgdQY38legAAAA?pid=Api&P=0&h=180" alt="Turmeric">
+        </div>
+        <div class="crop-details">
+            <h1>Turmeric</h1>
+            <strong>Overview:</strong> Turmeric is widely used as a spice and for its medicinal properties.<br><br>
+            <strong>Season:</strong> Planted before the monsoon, April-June.<br><br>
+            <strong>Soil:</strong> Well-drained loamy or alluvial soils.<br><br>
+            <strong>Growth Cycle:</strong> 7-9 months.<br><br>
+            <strong>Seed Cycle:</strong> Propagated using rhizomes.<br><br>
+            <strong>Watering:</strong> Requires frequent irrigation during dry spells.<br><br>
+            <strong>Pest Management:</strong> Monitor for rhizome rot and leaf spot.<br><br>
+            <strong>Harvest:</strong> Harvest when leaves turn yellow and dry.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://www.healthbenefitstimes.com/9/gallery/ginger/Ginger-plant.jpg" alt="Ginger">
+        </div>
+        <div class="crop-details">
+            <h1>Ginger</h1>
+            <strong>Overview:</strong> Ginger is used for its flavor, aroma, and medicinal properties.<br><br>
+            <strong>Season:</strong> Planted during April-May with pre-monsoon showers.<br><br>
+            <strong>Soil:</strong> Sandy loam soils with good drainage.<br><br>
+            <strong>Growth Cycle:</strong> 8-10 months.<br><br>
+            <strong>Seed Cycle:</strong> Propagated using rhizome pieces.<br><br>
+            <strong>Watering:</strong> Requires frequent watering.<br><br>
+            <strong>Pest Management:</strong> Monitor for rhizome rot and shoot borer.<br><br>
+            <strong>Harvest:</strong> Harvest when leaves turn yellow and start drying.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="http://www.floralencounters.com/graphics/Seeds/herbs/Cumin_plant.jpg" alt="Cumin">
+        </div>
+        <div class="crop-details">
+            <h1>Cumin</h1>
+            <strong>Overview:</strong> Cumin seeds are used as a spice in various cuisines globally.<br><br>
+            <strong>Season:</strong> Sown in October-November (Rabi season).<br><br>
+            <strong>Soil:</strong> Well-drained sandy loam soils.<br><br>
+            <strong>Growth Cycle:</strong> 100-120 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing in rows.<br><br>
+            <strong>Watering:</strong> Requires limited irrigation.<br><br>
+            <strong>Pest Management:</strong> Monitor for powdery mildew and aphids.<br><br>
+            <strong>Harvest:</strong> Harvest when plants turn brown and dry.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://easywaytogarden.com/wp-content/uploads/2023/01/coriander_plants-710x1262.jpg" alt="Coriander">
+        </div>
+        <div class="crop-details">
+            <h1>Coriander</h1>
+            <strong>Overview:</strong> Coriander is used both as a spice (seeds) and herb (leaves).<br><br>
+            <strong>Season:</strong> Grown in Rabi season, sown in October-November.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils.<br><br>
+            <strong>Growth Cycle:</strong> 90-120 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing in rows.<br><br>
+            <strong>Watering:</strong> Requires 2-3 irrigations.<br><br>
+            <strong>Pest Management:</strong> Monitor for aphids and powdery mildew.<br><br>
+            <strong>Harvest:</strong> Harvest when seeds turn brown and dry.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://thumbs.dreamstime.com/b/fresh-fenugreek-plants-planted-garden-top-view-fenugreek-plants-to-sunshine-fenugreek-plant-fresh-green-fenugreek-170167572.jpg" alt="Fenugreek">
+        </div>
+        <div class="crop-details">
+            <h1>Fenugreek</h1>
+            <strong>Overview:</strong> Fenugreek seeds and leaves are used for culinary and medicinal purposes.<br><br>
+            <strong>Season:</strong> Sown in October-November.<br><br>
+            <strong>Soil:</strong> Loamy to sandy loam soils.<br><br>
+            <strong>Growth Cycle:</strong> 90-110 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing.<br><br>
+            <strong>Watering:</strong> Requires light irrigation.<br><br>
+            <strong>Pest Management:</strong> Monitor for aphids and powdery mildew.<br><br>
+            <strong>Harvest:</strong> Harvest when pods dry and turn yellow.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://cdn.britannica.com/26/140626-050-5592EBC1/fennel-stem-bases-Florence-variety.jpg" alt="Fennel">
+        </div>
+        <div class="crop-details">
+            <h1>Fennel</h1>
+            <strong>Overview:</strong> Fennel seeds are used as a spice and for medicinal purposes.<br><br>
+            <strong>Season:</strong> Sown in October-November.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils.<br><br>
+            <strong>Growth Cycle:</strong> 140-160 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing in rows.<br><br>
+            <strong>Watering:</strong> Requires moderate irrigation.<br><br>
+            <strong>Pest Management:</strong> Monitor for aphids and caterpillars.<br><br>
+            <strong>Harvest:</strong> Harvest when seeds turn brown and dry.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://i.pinimg.com/originals/93/cc/35/93cc354775fbeaec15e1107c6177f490.jpg" alt="Mustard Seed">
+        </div>
+        <div class="crop-details">
+            <h1>Mustard Seed (as Spice)</h1>
+            <strong>Overview:</strong> Mustard seeds are used as a spice and for oil extraction.<br><br>
+            <strong>Season:</strong> Rabi season, sown in October-November.<br><br>
+            <strong>Soil:</strong> Loamy soils with good drainage.<br><br>
+            <strong>Growth Cycle:</strong> 110-140 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing.<br><br>
+            <strong>Watering:</strong> Requires minimal irrigation.<br><br>
+            <strong>Pest Management:</strong> Monitor for aphids and powdery mildew.<br><br>
+            <strong>Harvest:</strong> Harvest when pods turn yellow and dry.
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

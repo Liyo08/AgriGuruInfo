@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin: 20px 0;
+            color: #333;
+        }
+        .overview, .details {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+        .card h2 {
+            font-size: 16px;
+            padding: 10px;
+            margin: 0;
+            color: #444;
+        }
+        .crop-box {
+            display: flex;
+            flex-wrap: wrap;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .crop-image {
+            flex: 1 1 250px;
+            text-align: center;
+            padding: 10px;
+        }
+        .crop-image img {
+            width: 90%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .crop-image h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        .crop-details {
+            flex: 2 1 300px;
+            padding: 15px 20px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        @media (max-width: 700px) {
+            .crop-box {
+                flex-direction: column;
+            }
+            .crop-image, .crop-details {
+                flex: 1 1 100%;
+            }
+        }
+        .navbar {
+    position: fixed; /* stays on top when scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b2d8b2; /* light green */
+    padding: 10px 20px;
+    box-sizing: border-box; /* ensures padding does not add extra width */
+}
+
+
+.navbar-left h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #2e4d2e; /* dark green for contrast */
+    font-weight: 600;
+}
+
+.navbar-right a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #2e4d2e;
+    font-weight: 500;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 4px;
+}
+
+.navbar-right a:hover {
+    color: #1c331c;
+    border-bottom: 2px solid #1c331c;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-right {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    .navbar-right a {
+        margin: 5px 10px 5px 0;
+    }
+}
+.heading {
+    
+            padding-top:40px;
+            text-align: center;
+            font-size: 32px;
+            margin: 20px 0;
+            color: #333;}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="navbar-left">
+        <h1>AgriGrow</h1>
+    </div>
+    <div class="navbar-right">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="types.html">Types</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+    <div class="container">
+    <h1 class="heading">Fruits</h1>
+
+    <div class="overview">
+        <h2>Overview</h2>
+        <p>
+            Fruits are an essential part of human nutrition, providing vitamins, minerals, fiber, and antioxidants. They contribute to a healthy diet while also offering profitable returns to farmers due to high market demand and export opportunities.
+        </p>
+    </div>
+
+    <div class="details">
+        <h2>Details</h2>
+        <p>
+            <strong>Climate & Season:</strong> Varies with fruit type; most require moderate to warm climates.<br>
+            <strong>Soil:</strong> Well-drained, fertile soils with adequate organic matter.<br>
+            <strong>Watering:</strong> Regular watering essential during flowering and fruiting stages.<br>
+            <strong>Fertilizers:</strong> Organic manure and balanced fertilizers improve yield and fruit quality.<br>
+            <strong>Challenges:</strong> Pest management, disease control, and post-harvest handling are critical for quality fruit production.
+        </p>
+    </div>
+
+    <h2 style="text-align:center; margin-top: 40px;">Detailed Crop Information</h2>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://thumbs.dreamstime.com/b/mango-leaf-3149751.jpg" alt="Mango">
+        </div>
+        <div class="crop-details">
+            <h1>Mango</h1>
+            <strong>Overview:</strong> Mango, known as the king of fruits, is a tropical fruit rich in vitamins A and C.<br><br>
+            <strong>Season:</strong> Flowering in December-February, harvest in April-June.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils.<br><br>
+            <strong>Growth Cycle:</strong> Takes 3-5 years to bear fruits after planting.<br><br>
+            <strong>Seed Cycle:</strong> Propagated through grafting.<br><br>
+            <strong>Watering:</strong> Requires irrigation during flowering and fruit setting.<br><br>
+            <strong>Pest Management:</strong> Monitor for fruit fly and powdery mildew.<br><br>
+            <strong>Harvest:</strong> Harvest when fruits change color and become mature.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://i.pinimg.com/originals/1b/6f/cd/1b6fcd7e9236a155055035282df680af.png" alt="Banana">
+        </div>
+        <div class="crop-details">
+            <h1>Banana</h1>
+            <strong>Overview:</strong> Banana is a tropical fruit rich in potassium and energy, cultivated year-round.<br><br>
+            <strong>Season:</strong> Can be planted year-round.<br><br>
+            <strong>Soil:</strong> Fertile, well-drained loamy soils.<br><br>
+            <strong>Growth Cycle:</strong> 10-12 months for fruiting.<br><br>
+            <strong>Seed Cycle:</strong> Propagated using suckers or tissue culture plants.<br><br>
+            <strong>Watering:</strong> Requires frequent irrigation.<br><br>
+            <strong>Pest Management:</strong> Monitor for banana weevil and leaf spot diseases.<br><br>
+            <strong>Harvest:</strong> Harvest when the fruits are plump and green.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://png.pngtree.com/png-vector/20240224/ourlarge/pngtree-papaya-vertical-thailand-fruit-png-image_11765989.png" alt="Papaya">
+        </div>
+        <div class="crop-details">
+            <h1>Papaya</h1>
+            <strong>Overview:</strong> Papaya is a fast-growing fruit crop, rich in vitamin C and digestive enzymes.<br><br>
+            <strong>Season:</strong> Planting during February-March or June-July.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils.<br><br>
+            <strong>Growth Cycle:</strong> Begins fruiting within 6-9 months.<br><br>
+            <strong>Seed Cycle:</strong> Propagated by seeds.<br><br>
+            <strong>Watering:</strong> Regular watering is essential.<br><br>
+            <strong>Pest Management:</strong> Monitor for aphids and papaya ringspot virus.<br><br>
+            <strong>Harvest:</strong> Harvest when fruits turn yellow at the tip.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://thumbs.dreamstime.com/b/apples-fruit-vertical-view-several-fresh-one-cut-apple-shade-under-sunbeam-240254202.jpg" alt="Apple">
+        </div>
+        <div class="crop-details">
+            <h1>Apple</h1>
+            <strong>Overview:</strong> Apple is a temperate fruit rich in fiber and antioxidants, widely consumed fresh.<br><br>
+            <strong>Season:</strong> Flowering in spring, harvesting in late summer to autumn.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils with good organic content.<br><br>
+            <strong>Growth Cycle:</strong> Bears fruit in 4-5 years after planting.<br><br>
+            <strong>Seed Cycle:</strong> Propagated using grafted saplings.<br><br>
+            <strong>Watering:</strong> Requires irrigation during dry spells.<br><br>
+            <strong>Pest Management:</strong> Watch for apple scab and codling moth.<br><br>
+            <strong>Harvest:</strong> Harvest when fruits attain full color and size.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://cdn.imgbin.com/16/6/15/imgbin-purple-grape-8cyHp4kMB21sn7peHxGNLF5Tz.jpg" alt="Grapes">
+        </div>
+        <div class="crop-details">
+            <h1>Grapes</h1>
+            <strong>Overview:</strong> Grapes are cultivated for fresh consumption and wine production, rich in antioxidants.<br><br>
+            <strong>Season:</strong> Pruning in November-December, harvesting in March-May.<br><br>
+            <strong>Soil:</strong> Well-drained sandy loam soils.<br><br>
+            <strong>Growth Cycle:</strong> Bears fruit in 2-3 years.<br><br>
+            <strong>Seed Cycle:</strong> Propagated through cuttings.<br><br>
+            <strong>Watering:</strong> Requires irrigation during flowering and fruiting stages.<br><br>
+            <strong>Pest Management:</strong> Monitor for powdery mildew and mealybugs.<br><br>
+            <strong>Harvest:</strong> Harvest when grapes are fully colored and sweet.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://thumbs.dreamstime.com/b/orange-fruits-hanging-tree-branch-garden-vertical-shot-selective-focus-237673724.jpg" alt="Orange">
+        </div>
+        <div class="crop-details">
+            <h1>Orange</h1>
+            <strong>Overview:</strong> Orange is a citrus fruit rich in vitamin C, widely cultivated in subtropical regions.<br><br>
+            <strong>Season:</strong> Flowering in spring, harvesting in winter.<br><br>
+            <strong>Soil:</strong> Well-drained sandy loam soils.<br><br>
+            <strong>Growth Cycle:</strong> Bears fruit in 3-5 years.<br><br>
+            <strong>Seed Cycle:</strong> Propagated using budded plants.<br><br>
+            <strong>Watering:</strong> Requires irrigation during dry periods.<br><br>
+            <strong>Pest Management:</strong> Monitor for citrus psylla and aphids.<br><br>
+            <strong>Harvest:</strong> Harvest when fruits are fully colored and firm.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://c1.wallpaperflare.com/preview/194/686/391/leaf-fruit-food-nature.jpg" alt="Guava">
+        </div>
+        <div class="crop-details">
+            <h1>Guava</h1>
+            <strong>Overview:</strong> Guava is a hardy tropical fruit rich in vitamin C and dietary fiber.<br><br>
+            <strong>Season:</strong> Planting during rainy season; fruits available year-round.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils.<br><br>
+            <strong>Growth Cycle:</strong> Bears fruit in 2-3 years.<br><br>
+            <strong>Seed Cycle:</strong> Propagated using air layering or grafting.<br><br>
+            <strong>Watering:</strong> Requires moderate irrigation.<br><br>
+            <strong>Pest Management:</strong> Monitor for fruit fly and wilt.<br><br>
+            <strong>Harvest:</strong> Harvest when fruits turn yellowish-green.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://gardenerspath.com/wp-content/uploads/2021/10/Pomegranate-Tree-Growing-Guide.jpg" alt="Pomegranate">
+        </div>
+        <div class="crop-details">
+            <h1>Pomegranate</h1>
+            <strong>Overview:</strong> Pomegranate is a drought-tolerant fruit rich in antioxidants, vitamins, and minerals.<br><br>
+            <strong>Season:</strong> Flowering during March-June; harvesting from August onwards.<br><br>
+            <strong>Soil:</strong> Well-drained sandy loam soils.<br><br>
+            <strong>Growth Cycle:</strong> Bears fruit in 2-3 years.<br><br>
+            <strong>Seed Cycle:</strong> Propagated using cuttings or air layering.<br><br>
+            <strong>Watering:</strong> Requires light irrigation.<br><br>
+            <strong>Pest Management:</strong> Watch for fruit borer and aphids.<br><br>
+            <strong>Harvest:</strong> Harvest when fruits turn red and make a metallic sound.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://thumbs.dreamstime.com/b/chopped-watermelon-fruit-cubes-vertical-close-up-195497918.jpg" alt="Watermelon">
+        </div>
+        <div class="crop-details">
+            <h1>Watermelon</h1>
+            <strong>Overview:</strong> Watermelon is a summer fruit rich in water content, vitamins, and minerals.<br><br>
+            <strong>Season:</strong> Sown in January-March for summer harvest.<br><br>
+            <strong>Soil:</strong> Sandy loam soils with good drainage.<br><br>
+            <strong>Growth Cycle:</strong> 80-100 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct seed sowing.<br><br>
+            <strong>Watering:</strong> Requires moderate irrigation.<br><br>
+            <strong>Pest Management:</strong> Monitor for fruit fly and powdery mildew.<br><br>
+            <strong>Harvest:</strong> Harvest when the fruit sounds hollow on tapping and the tendril near the fruit dries.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://thumbs.dreamstime.com/b/whole-ripe-pineapple-upright-yellow-background-close-up-grown-costa-rica-vertical-tropical-fruit-s-form-green-239057972.jpg" alt="Pineapple">
+        </div>
+        <div class="crop-details">
+            <h1>Pineapple</h1>
+            <strong>Overview:</strong> Pineapple is a tropical fruit with high vitamin C content and digestive benefits.<br><br>
+            <strong>Season:</strong> Planting during the rainy season.<br><br>
+            <strong>Soil:</strong> Well-drained sandy loam soils.<br><br>
+            <strong>Growth Cycle:</strong> 15-18 months for fruiting.<br><br>
+            <strong>Seed Cycle:</strong> Propagated using suckers.<br><br>
+            <strong>Watering:</strong> Requires moderate irrigation.<br><br>
+            <strong>Pest Management:</strong> Monitor for mealybugs and root rot.<br><br>
+            <strong>Harvest:</strong> Harvest when fruit turns yellow at the base.
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

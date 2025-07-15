@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin: 20px 0;
+            color: #333;
+        }
+        .overview, .details {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+        .card h2 {
+            font-size: 16px;
+            padding: 10px;
+            margin: 0;
+            color: #444;
+        }
+        .crop-box {
+            display: flex;
+            flex-wrap: wrap;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .crop-image {
+            flex: 1 1 250px;
+            text-align: center;
+            padding: 10px;
+        }
+        .crop-image img {
+            width: 90%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .crop-image h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        .crop-details {
+            flex: 2 1 300px;
+            padding: 15px 20px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        @media (max-width: 700px) {
+            .crop-box {
+                flex-direction: column;
+            }
+            .crop-image, .crop-details {
+                flex: 1 1 100%;
+            }
+        }
+        .navbar {
+    position: fixed; /* stays on top when scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b2d8b2; /* light green */
+    padding: 10px 20px;
+  
+    box-sizing: border-box; /* ensures padding does not add extra width */
+}
+
+
+.navbar-left h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #2e4d2e; /* dark green for contrast */
+    font-weight: 600;
+}
+
+.navbar-right a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #2e4d2e;
+    font-weight: 500;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 4px;
+}
+
+.navbar-right a:hover {
+    color: #1c331c;
+    border-bottom: 2px solid #1c331c;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-right {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    .navbar-right a {
+        margin: 5px 10px 5px 0;
+    }
+}
+.heading {
+    
+            padding-top:40px;
+            text-align: center;
+            font-size: 32px;
+            margin: 20px 0;
+            color: #333;}
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar-left">
+        <h1>AgriGrow</h1>
+    </div>
+    <div class="navbar-right">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="types.html">Types</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+<div class="container">
+    <h1 class="heading">Cereals & Millets</h1>
+
+    <div class="overview">
+        <h2>Overview</h2>
+        <p>
+            Cereals and millets are staple grains providing essential energy, nutrients, and livelihoods for farmers worldwide. They are adaptable to different climates and play a crucial role in food security, making them ideal for cultivation in diverse regions.
+        </p>
+    </div>
+
+    <div class="details">
+        <h2>Details</h2>
+        <p>
+            <strong>Climate & Season:</strong> Best grown in moderate climates with well-distributed rainfall.<br>
+            <strong>Soil:</strong> Loamy, fertile soil with good drainage.<br>
+            <strong>Watering:</strong> Regular irrigation during key growth phases.<br>
+            <strong>Fertilizers:</strong> Use balanced NPK fertilizers for healthy growth.<br>
+            <strong>Challenges:</strong> Manage pests, water stress, and nutrient deficiencies using timely interventions.
+        </p>
+    </div>
+
+    
+   
+
+    <h2 style="text-align:center; margin-top: 40px;">Detailed Crop Information</h2>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://img.freepik.com/premium-photo/rice-plants-isolated-white-background_1299032-1176.jpg" alt="Rice">
+           
+        </div>
+        <div class="crop-details">
+             <h1>Rice</h1>
+            <strong>Overview:</strong> Rice is a staple food for over half the world's population, thriving in warm, humid climates.<br><br>
+            <strong>Season:</strong> Grown in Kharif season, planted during monsoon (June-July).<br><br>
+            <strong>Soil:</strong> Clayey or loamy soils with water retention capacity.<br><br>
+            <strong>Growth Cycle:</strong> 90-150 days depending on variety.<br><br>
+            <strong>Seed Cycle:</strong> Nursery preparation for 20-30 days, then transplanting.<br><br>
+            <strong>Watering:</strong> Requires standing water during most growth stages.<br><br>
+            <strong>Pest Management:</strong> Monitor for stem borers and leaf hoppers; use integrated pest management practices.<br><br>
+            <strong>Harvest:</strong> Harvest when grains are hard and yellow; cut and dry before threshing.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://media.sciencephoto.com/image/e7701149/800wm/E7701149-Wheat_plants.jpg" alt="Wheat">
+         
+        </div>
+        <div class="crop-details">
+            <h1>Wheat</h1>
+            <strong>Overview:</strong> Wheat is a widely grown cereal providing carbohydrates and proteins.<br><br>
+            <strong>Season:</strong> Best grown in Rabi season, sown in November-December.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soil with good fertility.<br><br>
+            <strong>Growth Cycle:</strong> 110-140 days from sowing to harvest.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing with seed drills.<br><br>
+            <strong>Watering:</strong> Requires 4-6 irrigations during the growth period.<br><br>
+            <strong>Pest Management:</strong> Watch for rust and aphid attacks; timely use of recommended pesticides.<br><br>
+            <strong>Harvest:</strong> Harvest when grains are hard and moisture is low; thresh and clean grains.
+        </div>
+    </div>
+    <div class="crop-box">
+    <div class="crop-image">
+        <img src="https://www.healthbenefitstimes.com/9/gallery/corn/Corn-plant.jpg" alt="Maize">
+    </div>
+    <div class="crop-details">
+        <h1>Maize (Corn)</h1>
+        <strong>Overview:</strong> Maize is a versatile cereal used for food, fodder, and industrial products.<br><br>
+        <strong>Season:</strong> Kharif season, sown in June-July.<br><br>
+        <strong>Soil:</strong> Well-drained loamy soil with good fertility.<br><br>
+        <strong>Growth Cycle:</strong> 90-120 days depending on variety.<br><br>
+        <strong>Seed Cycle:</strong> Direct sowing in rows.<br><br>
+        <strong>Watering:</strong> Requires irrigation during tasseling and grain filling stages.<br><br>
+        <strong>Pest Management:</strong> Monitor for stem borers, fall armyworm; use integrated pest management.<br><br>
+        <strong>Harvest:</strong> Harvest when cobs are dry and kernels are hard.
+    </div>
+</div>
+
+<div class="crop-box">
+    <div class="crop-image">
+        <img src="https://aminus3.s3.amazonaws.com/image/g0029/u00028569/i01288968/79eaad17c383b36bf6e27e221ffda590_large.jpg" alt="Barley">
+    </div>
+    <div class="crop-details">
+        <h1>Barley</h1>
+        <strong>Overview:</strong> Barley is a cereal used for food, feed, and brewing industries, adaptable to cooler climates.<br><br>
+        <strong>Season:</strong> Rabi season, sown in October-November.<br><br>
+        <strong>Soil:</strong> Sandy loam to loam soils with good drainage.<br><br>
+        <strong>Growth Cycle:</strong> 100-120 days.<br><br>
+        <strong>Seed Cycle:</strong> Direct sowing with seed drills.<br><br>
+        <strong>Watering:</strong> Requires minimal irrigation, 2-3 irrigations depending on rainfall.<br><br>
+        <strong>Pest Management:</strong> Watch for aphids and foliar diseases.<br><br>
+        <strong>Harvest:</strong> Harvest when spikes turn golden and hard.
+    </div>
+</div>
+
+<div class="crop-box">
+    <div class="crop-image">
+        <img src="https://pixahive.com/wp-content/uploads/2020/10/Jowar-comb-plant-150700-pixahive-768x1024.jpg" alt="Sorghum">
+    </div>
+    <div class="crop-details">
+        <h1>Sorghum (Jowar)</h1>
+        <strong>Overview:</strong> Sorghum is a drought-tolerant cereal important in semi-arid regions for food and fodder.<br><br>
+        <strong>Season:</strong> Kharif season, sown in June-July.<br><br>
+        <strong>Soil:</strong> Well-drained sandy loam soils.<br><br>
+        <strong>Growth Cycle:</strong> 100-120 days.<br><br>
+        <strong>Seed Cycle:</strong> Direct sowing in rows.<br><br>
+        <strong>Watering:</strong> Minimal irrigation required, avoid waterlogging.<br><br>
+        <strong>Pest Management:</strong> Monitor for stem borers and shoot flies.<br><br>
+        <strong>Harvest:</strong> Harvest when grains are hard and plants are dry.
+    </div>
+</div>
+
+<div class="crop-box">
+    <div class="crop-image">
+        <img src="https://thumbs.dreamstime.com/b/pearl-millet-pennisetum-glaucum-bajra-green-plant-farm-277613095.jpg" alt="Pearl Millet">
+    </div>
+    <div class="crop-details">
+        <h1>Pearl Millet (Bajra)</h1>
+        <strong>Overview:</strong> Pearl Millet is a hardy, drought-resistant cereal cultivated in arid and semi-arid regions.<br><br>
+        <strong>Season:</strong> Kharif season, sown in June-July.<br><br>
+        <strong>Soil:</strong> Sandy loam soils, tolerant to poor fertility.<br><br>
+        <strong>Growth Cycle:</strong> 80-100 days.<br><br>
+        <strong>Seed Cycle:</strong> Direct sowing in rows.<br><br>
+        <strong>Watering:</strong> Requires minimal watering, suited to rainfed areas.<br><br>
+        <strong>Pest Management:</strong> Watch for downy mildew and smut diseases.<br><br>
+        <strong>Harvest:</strong> Harvest when heads are dry and grains are hard.
+    </div>
+</div>
+
+<div class="crop-box">
+    <div class="crop-image">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/1*5vgv_zZRqbRpD7SuAA6DqQ.jpeg" alt="Finger Millet">
+    </div>
+    <div class="crop-details">
+        <h1>Finger Millet (Ragi)</h1>
+        <strong>Overview:</strong> Finger Millet is a nutritious millet rich in calcium and iron, suitable for dryland farming.<br><br>
+        <strong>Season:</strong> Kharif season, sown in June-July.<br><br>
+        <strong>Soil:</strong> Well-drained loamy to sandy loam soils.<br><br>
+        <strong>Growth Cycle:</strong> 100-120 days.<br><br>
+        <strong>Seed Cycle:</strong> Transplanting from nursery or direct sowing.<br><br>
+        <strong>Watering:</strong> Requires moderate watering.<br><br>
+        <strong>Pest Management:</strong> Monitor for blast disease and manage with timely fungicide sprays.<br><br>
+        <strong>Harvest:</strong> Harvest when ear heads turn brown and dry.
+    </div>
+</div>
+
+<div class="crop-box">
+    <div class="crop-image">
+        <img src="https://images.creativemarket.com/0.1.0/ps/4989703/1820/2730/m1/fpnw/wm1/ef4yen0xt89kcwcjlsw5f0ylldlzwa4vkozdqryqmsluz5ldvtkexmflfgk2urwc-.jpg?1535929567&s=ab98ccf115b48879e6d5e63c3b7ac49b" alt="Oats">
+    </div>
+    <div class="crop-details">
+        <h1>Oats</h1>
+        <strong>Overview:</strong> Oats are grown for grain and fodder, rich in dietary fiber, adaptable to cool climates.<br><br>
+        <strong>Season:</strong> Rabi season, sown in October-November.<br><br>
+        <strong>Soil:</strong> Well-drained loamy soil.<br><br>
+        <strong>Growth Cycle:</strong> 120-150 days.<br><br>
+        <strong>Seed Cycle:</strong> Direct sowing in rows.<br><br>
+        <strong>Watering:</strong> Requires 3-4 irrigations during growth.<br><br>
+        <strong>Pest Management:</strong> Watch for rust and aphid infestations.<br><br>
+        <strong>Harvest:</strong> Harvest when grains are hard and dry.
+    </div>
+</div>
+
+<div class="crop-box">
+    <div class="crop-image">
+        <img src="https://www.healthbenefitstimes.com/9/gallery/foxtail-millet/Foxtail-millet-leaves.jpg" alt="Foxtail Millet">
+    </div>
+    <div class="crop-details">
+        <h1>Foxtail Millet</h1>
+        <strong>Overview:</strong> Foxtail Millet is a drought-tolerant millet, suitable for dryland farming, high in fiber and minerals.<br><br>
+        <strong>Season:</strong> Kharif season, sown in June-July.<br><br>
+        <strong>Soil:</strong> Well-drained loamy to sandy loam soils.<br><br>
+        <strong>Growth Cycle:</strong> 80-100 days.<br><br>
+        <strong>Seed Cycle:</strong> Direct sowing in rows.<br><br>
+        <strong>Watering:</strong> Requires minimal watering, tolerates drought.<br><br>
+        <strong>Pest Management:</strong> Monitor for blast and smut diseases.<br><br>
+        <strong>Harvest:</strong> Harvest when heads turn yellow and dry.
+    </div>
+</div>
+
+
+</div>
+</body>
+</html>

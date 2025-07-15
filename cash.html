@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Crops</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            margin-top: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin: 20px 0;
+            color: #333;
+        }
+        .heading {
+    
+            padding-top:40px;
+            text-align: center;
+            font-size: 32px;
+            margin: 20px 0;
+            color: #333;
+        }
+        .overview, .details {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+        .card h2 {
+            font-size: 16px;
+            padding: 10px;
+            margin: 0;
+            color: #444;
+        }
+        .crop-box {
+            display: flex;
+            flex-wrap: wrap;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .crop-image {
+            flex: 1 1 250px;
+            text-align: center;
+            padding: 10px;
+        }
+        .crop-image img {
+            width: 90%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .crop-image h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        .crop-details {
+            flex: 2 1 300px;
+            padding: 15px 20px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        @media (max-width: 700px) {
+            .crop-box {
+                flex-direction: column;
+            }
+            .crop-image, .crop-details {
+                flex: 1 1 100%;
+            }
+        }
+        .navbar {
+    position: fixed; /* stays on top when scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    padding-bottom: 30px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b2d8b2; /* light green */
+    padding: 10px 20px;
+    box-sizing: border-box; /* ensures padding does not add extra width */
+}
+
+
+.navbar-left h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #2e4d2e; /* dark green for contrast */
+    font-weight: 600;
+}
+
+.navbar-right a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #2e4d2e;
+    font-weight: 500;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 4px;
+}
+
+.navbar-right a:hover {
+    color: #1c331c;
+    border-bottom: 2px solid #1c331c;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-right {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    .navbar-right a {
+        margin: 5px 10px 5px 0;
+    }
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="navbar-left">
+        <h1>AgriGrow</h1>
+    </div>
+    <div class="navbar-right">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="types.html">Types</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+    <div class="container">
+         
+    <h1 class="heading">Cash Crops</h1>
+
+    <div class="overview">
+        <h2>Overview</h2>
+        <p>
+            Cash crops are cultivated primarily for sale and profit, providing economic security for farmers. They are vital for industries such as textiles, sugar, beverages, and oils, making them important components of rural livelihoods.
+        </p>
+    </div>
+
+    <div class="details">
+        <h2>Details</h2>
+        <p>
+            <strong>Climate & Season:</strong> Varies depending on crop; most prefer warm climates with adequate rainfall.<br>
+            <strong>Soil:</strong> Fertile, well-drained soils suited to crop needs.<br>
+            <strong>Watering:</strong> Regular watering based on the crop's moisture needs.<br>
+            <strong>Fertilizers:</strong> Use organic manure and balanced fertilizers for good yield.<br>
+            <strong>Challenges:</strong> Manage pests, disease, and market fluctuations through planning and monitoring.
+        </p>
+    </div>
+
+    <h2 style="text-align:center; margin-top: 40px;">Detailed Crop Information</h2>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://sweetcanes.com/wp-content/uploads/SAC-RSM-1.jpg" alt="Sugarcane">
+        </div>
+        <div class="crop-details">
+            <h1>Sugarcane</h1>
+            <strong>Overview:</strong> Sugarcane is a tropical grass cultivated for sugar and ethanol production.<br><br>
+            <strong>Season:</strong> Planted in February-March or September-October depending on region.<br><br>
+            <strong>Soil:</strong> Deep, well-drained loamy soil with high fertility.<br><br>
+            <strong>Growth Cycle:</strong> 10-18 months depending on variety and region.<br><br>
+            <strong>Seed Cycle:</strong> Planted using stem cuttings (setts).<br><br>
+            <strong>Watering:</strong> Requires frequent irrigation, especially in dry areas.<br><br>
+            <strong>Pest Management:</strong> Monitor for borers, aphids, and white grubs.<br><br>
+            <strong>Harvest:</strong> Harvest when stalks are mature and sugar content is highest.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://jooinn.com/images/cotton-plant-4.jpg" alt="Cotton">
+        </div>
+        <div class="crop-details">
+            <h1>Cotton</h1>
+            <strong>Overview:</strong> Cotton is a fiber crop essential for the textile industry, also providing cottonseed oil and cake.<br><br>
+            <strong>Season:</strong> Sown in April-May or June-July based on region.<br><br>
+            <strong>Soil:</strong> Well-drained black soils and alluvial soils.<br><br>
+            <strong>Growth Cycle:</strong> 150-180 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing using treated seeds.<br><br>
+            <strong>Watering:</strong> Needs 4-6 irrigations during the crop cycle.<br><br>
+            <strong>Pest Management:</strong> Monitor for bollworms and whiteflies, use integrated pest management.<br><br>
+            <strong>Harvest:</strong> Pick when bolls are fully opened and fluffy.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://thumbs.dreamstime.com/b/blooming-tobacco-plants-leaves-green-leaf-tobacco-tobacco-big-leaf-crops-growing-tobacco-plantation-field-blooming-tobacco-181105369.jpg" alt="Tobacco">
+        </div>
+        <div class="crop-details">
+            <h1>Tobacco</h1>
+            <strong>Overview:</strong> Tobacco is grown for its leaves, used in the manufacture of cigarettes, cigars, and other products.<br><br>
+            <strong>Season:</strong> Sown in June-July or October-November.<br><br>
+            <strong>Soil:</strong> Sandy loam to loamy soils with good drainage.<br><br>
+            <strong>Growth Cycle:</strong> 100-130 days.<br><br>
+            <strong>Seed Cycle:</strong> Transplanted from nurseries to the field.<br><br>
+            <strong>Watering:</strong> Requires moderate watering; avoid waterlogging.<br><br>
+            <strong>Pest Management:</strong> Monitor for aphids and caterpillars.<br><br>
+            <strong>Harvest:</strong> Harvest leaves at maturity; curing is done before marketing.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://static1.squarespace.com/static/53fcfd03e4b085ab0d37dff8/t/549ee13be4b029881efcd95d/1419698495262/" alt="Tea">
+        </div>
+        <div class="crop-details">
+            <h1>Tea</h1>
+            <strong>Overview:</strong> Tea is a perennial shrub grown for its tender leaves, used in beverage preparation globally.<br><br>
+            <strong>Season:</strong> Planting during monsoon; plucking done throughout the year.<br><br>
+            <strong>Soil:</strong> Acidic, well-drained loamy soils rich in organic matter.<br><br>
+            <strong>Growth Cycle:</strong> Perennial, productive for 40-50 years.<br><br>
+            <strong>Seed Cycle:</strong> Propagated using cuttings or seedlings.<br><br>
+            <strong>Watering:</strong> Requires regular rainfall or irrigation.<br><br>
+            <strong>Pest Management:</strong> Monitor for mites and caterpillars; use integrated management.<br><br>
+            <strong>Harvest:</strong> Regular plucking of young shoots.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://balconygardenweb.b-cdn.net/wp-content/uploads/2019/08/The-coffee-tree-.jpeg" alt="Coffee">
+        </div>
+        <div class="crop-details">
+            <h1>Coffee</h1>
+            <strong>Overview:</strong> Coffee is a beverage crop grown for its beans, requiring shaded environments and specific climates.<br><br>
+            <strong>Season:</strong> Planting is done in June-July; harvesting in November-February.<br><br>
+            <strong>Soil:</strong> Well-drained, rich loamy soils with good organic matter.<br><br>
+            <strong>Growth Cycle:</strong> Takes 3-4 years to bear fruit.<br><br>
+            <strong>Seed Cycle:</strong> Propagated using seeds or cuttings.<br><br>
+            <strong>Watering:</strong> Requires regular rainfall or irrigation.<br><br>
+            <strong>Pest Management:</strong> Watch for berry borer and leaf rust.<br><br>
+            <strong>Harvest:</strong> Hand-picked when berries turn red.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://images.saymedia-content.com/.image/t_share/MTc2MjkxODU2ODQ0MzM0MjUz/facts-about-the-rubber-tree-description-and-used.jpg" alt="Rubber">
+        </div>
+        <div class="crop-details">
+            <h1>Rubber</h1>
+            <strong>Overview:</strong> Rubber is harvested for latex, used in making tires and various rubber products.<br><br>
+            <strong>Season:</strong> Planting during monsoon; tapping starts after 5-7 years.<br><br>
+            <strong>Soil:</strong> Well-drained, lateritic to clay loam soils.<br><br>
+            <strong>Growth Cycle:</strong> Trees productive for 25-30 years.<br><br>
+            <strong>Seed Cycle:</strong> Propagated using bud grafting or seeds.<br><br>
+            <strong>Watering:</strong> Requires high rainfall or irrigation.<br><br>
+            <strong>Pest Management:</strong> Watch for leaf diseases and root rot.<br><br>
+            <strong>Harvest:</strong> Tapping for latex collection during early morning hours.
+        </div>
+    </div>
+
+</div>
+<div class="crop-box">
+    <div class="crop-image">
+        <img src="" alt="Oil Palm">
+    </div>
+    <div class="crop-details">
+        <h1>Oil Palm</h1>
+        <strong>Overview:</strong> Oil Palm is cultivated for palm oil, used in food, cosmetics, and biofuels.<br><br>
+        <strong>Season:</strong> Planting during monsoon; can be planted year-round in humid climates.<br><br>
+        <strong>Soil:</strong> Deep, well-drained loamy soils with high fertility.<br><br>
+        <strong>Growth Cycle:</strong> Starts yielding in 3-4 years; productive for 25-30 years.<br><br>
+        <strong>Seed Cycle:</strong> Propagated using seedlings.<br><br>
+        <strong>Watering:</strong> Requires consistent moisture; irrigation needed in dry areas.<br><br>
+        <strong>Pest Management:</strong> Monitor for bagworms and beetles.<br><br>
+        <strong>Harvest:</strong> Harvest fruit bunches when fruits turn reddish-orange.
+    </div>
+</div>
+
+<div class="crop-box">
+    <div class="crop-image">
+        <img src="" alt="Jute">
+    </div>
+    <div class="crop-details">
+        <h1>Jute</h1>
+        <strong>Overview:</strong> Jute is a fiber crop used for making gunny bags, ropes, and eco-friendly products.<br><br>
+        <strong>Season:</strong> Sown in March-May with pre-monsoon showers.<br><br>
+        <strong>Soil:</strong> Well-drained, fertile alluvial soil rich in organic matter.<br><br>
+        <strong>Growth Cycle:</strong> 100-150 days.<br><br>
+        <strong>Seed Cycle:</strong> Direct sowing in rows.<br><br>
+        <strong>Watering:</strong> Requires adequate moisture; avoid waterlogging.<br><br>
+        <strong>Pest Management:</strong> Watch for stem weevils and leaf eaters.<br><br>
+        <strong>Harvest:</strong> Harvest at flowering stage; retting is done for fiber extraction.
+    </div>
+</div>
+
+<div class="crop-box">
+    <div class="crop-image">
+        <img src="" alt="Hemp">
+    </div>
+    <div class="crop-details">
+        <h1>Hemp</h1>
+        <strong>Overview:</strong> Hemp is a versatile crop used for fiber, seeds, and oil with industrial applications.<br><br>
+        <strong>Season:</strong> Sown in spring (March-April) or autumn (September-October).<br><br>
+        <strong>Soil:</strong> Well-drained, fertile loamy soils.<br><br>
+        <strong>Growth Cycle:</strong> 90-120 days.<br><br>
+        <strong>Seed Cycle:</strong> Direct sowing with seed drills.<br><br>
+        <strong>Watering:</strong> Requires moderate watering during growth.<br><br>
+        <strong>Pest Management:</strong> Generally pest-resistant; monitor for mildew.<br><br>
+        <strong>Harvest:</strong> Harvest when seeds mature and stalks are ready for fiber extraction.
+    </div>
+</div>
+
+<div class="crop-box">
+    <div class="crop-image">
+        <img src="" alt="Saffron">
+    </div>
+    <div class="crop-details">
+        <h1>Saffron</h1>
+        <strong>Overview:</strong> Saffron is a high-value spice crop cultivated for its stigmas, used as a seasoning and coloring agent.<br><br>
+        <strong>Season:</strong> Corms planted in July-August; flowers bloom in October-November.<br><br>
+        <strong>Soil:</strong> Well-drained sandy or loamy soils rich in organic matter.<br><br>
+        <strong>Growth Cycle:</strong> Flowers bloom 6-8 weeks after planting.<br><br>
+        <strong>Seed Cycle:</strong> Propagated using corms.<br><br>
+        <strong>Watering:</strong> Requires minimal irrigation; avoid excessive moisture.<br><br>
+        <strong>Pest Management:</strong> Monitor for rodents and fungal diseases.<br><br>
+        <strong>Harvest:</strong> Harvest flowers early morning and dry stigmas for storage.
+    </div>
+</div>
+
+</body>
+</html>

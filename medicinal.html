@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicinal Crops</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin: 20px 0;
+            color: #333;
+        }
+        .overview, .details {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+        .card h2 {
+            font-size: 16px;
+            padding: 10px;
+            margin: 0;
+            color: #444;
+        }
+        .crop-box {
+            display: flex;
+            flex-wrap: wrap;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .crop-image {
+            flex: 1 1 250px;
+            text-align: center;
+            padding: 10px;
+        }
+        .crop-image img {
+            width: 90%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .crop-image h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        .crop-details {
+            flex: 2 1 300px;
+            padding: 15px 20px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        @media (max-width: 700px) {
+            .crop-box {
+                flex-direction: column;
+            }
+            .crop-image, .crop-details {
+                flex: 1 1 100%;
+            }
+        }
+        .navbar {
+    position: fixed; /* stays on top when scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b2d8b2; /* light green */
+    padding: 10px 20px;
+    box-sizing: border-box; /* ensures padding does not add extra width */
+}
+
+
+.navbar-left h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #2e4d2e; /* dark green for contrast */
+    font-weight: 600;
+}
+
+.navbar-right a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #2e4d2e;
+    font-weight: 500;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 4px;
+}
+
+.navbar-right a:hover {
+    color: #1c331c;
+    border-bottom: 2px solid #1c331c;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-right {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    .navbar-right a {
+        margin: 5px 10px 5px 0;
+    }
+}
+.heading {
+    
+            padding-top:40px;
+            text-align: center;
+            font-size: 32px;
+            margin: 20px 0;
+            color: #333;}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="navbar-left">
+        <h1>AgriGrow</h1>
+    </div>
+    <div class="navbar-right">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="types.html">Types</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+    <div class="container">
+    <h1 class="heading">Medicinal & Aromatic Crops</h1>
+
+    <div class="overview">
+        <h2>Overview</h2>
+        <p>
+            Medicinal and aromatic crops are used for their health benefits, essential oils, and therapeutic properties. They play a significant role in traditional and modern medicine, as well as in the fragrance and cosmetics industries, providing a sustainable income for farmers.
+        </p>
+    </div>
+
+    <div class="details">
+        <h2>Details</h2>
+        <p>
+            <strong>Climate & Season:</strong> Varies by crop; many thrive in warm, subtropical climates.<br>
+            <strong>Soil:</strong> Well-drained, fertile soils with good organic matter.<br>
+            <strong>Watering:</strong> Moderate watering is needed, avoiding waterlogging.<br>
+            <strong>Fertilizers:</strong> Organic manure and limited chemical fertilizers enhance quality.<br>
+            <strong>Challenges:</strong> Requires careful pest and disease management to maintain medicinal value.
+        </p>
+    </div>
+
+    <h2 style="text-align:center; margin-top: 40px;">Detailed Crop Information</h2>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://thumbs.dreamstime.com/b/ashwagandha-plant-plant-name-ashwagandha-rajasthan-235603477.jpg" alt="Ashwagandha">
+        </div>
+        <div class="crop-details">
+            <h1>Ashwagandha</h1>
+            <strong>Overview:</strong> Ashwagandha is a medicinal herb used in Ayurveda for stress relief and immunity boosting.<br><br>
+            <strong>Season:</strong> Sown in June-July.<br><br>
+            <strong>Soil:</strong> Sandy loam soils with good drainage.<br><br>
+            <strong>Growth Cycle:</strong> 150-180 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing of seeds.<br><br>
+            <strong>Watering:</strong> Minimal watering required.<br><br>
+            <strong>Pest Management:</strong> Monitor for leaf spot and wilting.<br><br>
+            <strong>Harvest:</strong> Roots harvested when plants mature and leaves dry.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://wallpapercave.com/wp/wp8182027.jpg" alt="Tulsi">
+        </div>
+        <div class="crop-details">
+            <h1>Tulsi (Holy Basil)</h1>
+            <strong>Overview:</strong> Tulsi is revered in Ayurveda for its medicinal and spiritual benefits.<br><br>
+            <strong>Season:</strong> Sown in June-July.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils.<br><br>
+            <strong>Growth Cycle:</strong> Ready for harvest in 90-100 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct seed sowing or nursery transplantation.<br><br>
+            <strong>Watering:</strong> Regular light watering.<br><br>
+            <strong>Pest Management:</strong> Monitor for aphids and leaf spots.<br><br>
+            <strong>Harvest:</strong> Leaves harvested during flowering for maximum oil content.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://cdn.pixabay.com/photo/2020/01/01/10/11/aloe-vera-4733276_640.jpg" alt="Aloe Vera">
+        </div>
+        <div class="crop-details">
+            <h1>Aloe Vera</h1>
+            <strong>Overview:</strong> Aloe Vera is known for its medicinal uses in skincare and digestion.<br><br>
+            <strong>Season:</strong> Can be planted year-round.<br><br>
+            <strong>Soil:</strong> Sandy loam with good drainage.<br><br>
+            <strong>Growth Cycle:</strong> Harvesting starts after 8-10 months.<br><br>
+            <strong>Seed Cycle:</strong> Propagated using suckers.<br><br>
+            <strong>Watering:</strong> Requires minimal watering.<br><br>
+            <strong>Pest Management:</strong> Watch for aphids and fungal infections.<br><br>
+            <strong>Harvest:</strong> Harvest mature leaves as needed.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://wallpapers.com/images/hd/cute-mint-green-aesthetic-hkwry475azuy0o0l.jpg" alt="Mint">
+        </div>
+        <div class="crop-details">
+            <h1>Mint</h1>
+            <strong>Overview:</strong> Mint is an aromatic herb used for essential oil extraction and culinary purposes.<br><br>
+            <strong>Season:</strong> Planted during spring (February-March).<br><br>
+            <strong>Soil:</strong> Rich, moist, well-drained soils.<br><br>
+            <strong>Growth Cycle:</strong> Ready for harvest in 90-100 days.<br><br>
+            <strong>Seed Cycle:</strong> Propagated through root suckers.<br><br>
+            <strong>Watering:</strong> Requires regular watering.<br><br>
+            <strong>Pest Management:</strong> Watch for leaf spot and mites.<br><br>
+            <strong>Harvest:</strong> Harvest before flowering for best oil content.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://www.pngitem.com/pimgs/m/238-2388338_lemongrass-bunch-hd-png-download.png" alt="Lemongrass">
+        </div>
+        <div class="crop-details">
+            <h1>Lemongrass</h1>
+            <strong>Overview:</strong> Lemongrass is an aromatic grass used for essential oils and herbal teas.<br><br>
+            <strong>Season:</strong> Planted during monsoon season.<br><br>
+            <strong>Soil:</strong> Well-drained sandy loam soils.<br><br>
+            <strong>Growth Cycle:</strong> Ready for first harvest in 4-6 months.<br><br>
+            <strong>Seed Cycle:</strong> Propagated using slips.<br><br>
+            <strong>Watering:</strong> Requires moderate watering.<br><br>
+            <strong>Pest Management:</strong> Monitor for leaf blight and grasshoppers.<br><br>
+            <strong>Harvest:</strong> Harvest leaves for oil extraction every 3-4 months.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://static.vecteezy.com/system/resources/previews/000/391/017/original/vector-argentine-senna-plant.jpg" alt="Senna">
+        </div>
+        <div class="crop-details">
+            <h1>Senna</h1>
+            <strong>Overview:</strong> Senna is used in traditional medicine for its laxative properties.<br><br>
+            <strong>Season:</strong> Sown in June-July.<br><br>
+            <strong>Soil:</strong> Sandy loam with good drainage.<br><br>
+            <strong>Growth Cycle:</strong> Harvest in 140-160 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct seed sowing.<br><br>
+            <strong>Watering:</strong> Minimal watering required.<br><br>
+            <strong>Pest Management:</strong> Monitor for leaf spot and caterpillars.<br><br>
+            <strong>Harvest:</strong> Harvest leaves and pods when mature.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://cdn.pixabay.com/photo/2021/04/17/01/26/coriander-6184833_1280.jpg" alt="Coriander">
+        </div>
+        <div class="crop-details">
+            <h1>Coriander</h1>
+            <strong>Overview:</strong> Coriander is used for its aromatic leaves and seeds, having medicinal and culinary value.<br><br>
+            <strong>Season:</strong> Sown in October-November.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils.<br><br>
+            <strong>Growth Cycle:</strong> 90-100 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct seed sowing.<br><br>
+            <strong>Watering:</strong> Requires moderate irrigation.<br><br>
+            <strong>Pest Management:</strong> Monitor for aphids and powdery mildew.<br><br>
+            <strong>Harvest:</strong> Harvest leaves and seeds when ready.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://static4.depositphotos.com/1006881/284/i/950/depositphotos_2844392-stock-photo-basil-plant.jpg" alt="Basil">
+        </div>
+        <div class="crop-details">
+            <h1>Basil</h1>
+            <strong>Overview:</strong> Basil is an aromatic herb used in culinary and medicinal applications.<br><br>
+            <strong>Season:</strong> Planted in spring and summer.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils.<br><br>
+            <strong>Growth Cycle:</strong> 60-90 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing or transplanting.<br><br>
+            <strong>Watering:</strong> Requires regular watering.<br><br>
+            <strong>Pest Management:</strong> Monitor for aphids and fungal diseases.<br><br>
+            <strong>Harvest:</strong> Harvest leaves before flowering for best quality.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://c1.wallpaperflare.com/preview/51/120/864/marigold-plant-flowers-bloom-gardening-flower-garden.jpg" alt="Marigold">
+        </div>
+        <div class="crop-details">
+            <h1>Marigold</h1>
+            <strong>Overview:</strong> Marigold flowers are used for medicinal and ornamental purposes.<br><br>
+            <strong>Season:</strong> Sown in June-July or October.<br><br>
+            <strong>Soil:</strong> Well-drained sandy loam soils.<br><br>
+            <strong>Growth Cycle:</strong> 70-90 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct seed sowing.<br><br>
+            <strong>Watering:</strong> Requires moderate watering.<br><br>
+            <strong>Pest Management:</strong> Monitor for aphids and fungal diseases.<br><br>
+            <strong>Harvest:</strong> Harvest flowers regularly for continuous blooming.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://healthiersteps.com/wp-content/uploads/2022/11/neem.jpg" alt="Neem">
+        </div>
+        <div class="crop-details">
+            <h1>Neem</h1>
+            <strong>Overview:</strong> Neem is known for its medicinal properties and pest-repellent qualities.<br><br>
+            <strong>Season:</strong> Planted during monsoon.<br><br>
+            <strong>Soil:</strong> Well-drained sandy soils.<br><br>
+            <strong>Growth Cycle:</strong> Slow-growing, but leaves can be harvested yearly.<br><br>
+            <strong>Seed Cycle:</strong> Propagated through seeds.<br><br>
+            <strong>Watering:</strong> Requires minimal watering once established.<br><br>
+            <strong>Pest Management:</strong> Neem itself is pest-resistant.<br><br>
+            <strong>Harvest:</strong> Leaves and seeds are harvested for medicinal uses.
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

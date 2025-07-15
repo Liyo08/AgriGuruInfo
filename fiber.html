@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibre Crops</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin: 20px 0;
+            color: #333;
+        }
+        .overview, .details {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+        .card h2 {
+            font-size: 16px;
+            padding: 10px;
+            margin: 0;
+            color: #444;
+        }
+        .crop-box {
+            display: flex;
+            flex-wrap: wrap;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .crop-image {
+            flex: 1 1 250px;
+            text-align: center;
+            padding: 10px;
+        }
+        .crop-image img {
+            width: 90%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .crop-image h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        .crop-details {
+            flex: 2 1 300px;
+            padding: 15px 20px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        @media (max-width: 700px) {
+            .crop-box {
+                flex-direction: column;
+            }
+            .crop-image, .crop-details {
+                flex: 1 1 100%;
+            }
+        }
+        .navbar {
+    position: fixed; /* stays on top when scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b2d8b2; /* light green */
+    padding: 10px 20px;
+    box-sizing: border-box; /* ensures padding does not add extra width */
+}
+
+
+.navbar-left h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #2e4d2e; /* dark green for contrast */
+    font-weight: 600;
+}
+
+.navbar-right a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #2e4d2e;
+    font-weight: 500;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 4px;
+}
+
+.navbar-right a:hover {
+    color: #1c331c;
+    border-bottom: 2px solid #1c331c;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-right {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    .navbar-right a {
+        margin: 5px 10px 5px 0;
+    }
+}
+.heading {
+    
+            padding-top:40px;
+            text-align: center;
+            font-size: 32px;
+            margin: 20px 0;
+            color: #333;}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="navbar-left">
+        <h1>AgriGrow</h1>
+    </div>
+    <div class="navbar-right">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="types.html">Types</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+    <div class="container">
+    <h1 class="heading">Fiber Crops</h1>
+
+    <div class="overview">
+        <h2>Overview</h2>
+        <p>
+            Fiber crops are cultivated for their valuable natural fibers used in textiles, ropes, paper, and eco-friendly products. They provide sustainable livelihoods and reduce dependence on synthetic fibers, supporting environmental sustainability.
+        </p>
+    </div>
+
+    <div class="details">
+        <h2>Details</h2>
+        <p>
+            <strong>Climate & Season:</strong> Thrive in warm, humid to moderate climates with adequate rainfall.<br>
+            <strong>Soil:</strong> Fertile, well-drained soils support quality fiber yield.<br>
+            <strong>Watering:</strong> Require consistent moisture during growth stages.<br>
+            <strong>Fertilizers:</strong> Balanced NPK and organic fertilizers promote healthy growth.<br>
+            <strong>Challenges:</strong> Managing pests, retting quality, and harvesting at the correct stage to ensure strong, clean fibers.
+        </p>
+    </div>
+
+    <h2 style="text-align:center; margin-top: 40px;">Detailed Crop Information</h2>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://jooinn.com/images/cotton-plant-4.jpg" alt="Cotton">
+        </div>
+        <div class="crop-details">
+            <h1>Cotton</h1>
+            <strong>Overview:</strong> Cotton is a major fiber crop providing soft, breathable fibers for textiles worldwide.<br><br>
+            <strong>Season:</strong> Grown in Kharif season, sown in April-June.<br><br>
+            <strong>Soil:</strong> Black soil with good moisture retention.<br><br>
+            <strong>Growth Cycle:</strong> 160-180 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing using seed drills.<br><br>
+            <strong>Watering:</strong> Moderate irrigation required.<br><br>
+            <strong>Pest Management:</strong> Monitor for bollworm and whiteflies.<br><br>
+            <strong>Harvest:</strong> Harvest when bolls open and fibers are fluffy.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://thumbs.dreamstime.com/b/tall-jute-plants-field-assam-india-known-as-golden-fiber-tall-jute-plants-field-assam-india-known-as-360144001.jpg" alt="Jute">
+        </div>
+        <div class="crop-details">
+            <h1>Jute</h1>
+            <strong>Overview:</strong> Known as the "Golden Fiber", jute is used for making sacks, ropes, and carpets.<br><br>
+            <strong>Season:</strong> Sown in March-May.<br><br>
+            <strong>Soil:</strong> Fertile, well-drained alluvial soils.<br><br>
+            <strong>Growth Cycle:</strong> 120-150 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing in rows.<br><br>
+            <strong>Watering:</strong> Requires periodic rainfall and good moisture.<br><br>
+            <strong>Pest Management:</strong> Watch for stem rot and insect pests.<br><br>
+            <strong>Harvest:</strong> Harvest at flowering stage and perform retting for fiber extraction.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://media.sciencephoto.com/image/e7701523/800wm/E7701523-Hemp_plants.jpg" alt="Hemp">
+        </div>
+        <div class="crop-details">
+            <h1>Hemp</h1>
+            <strong>Overview:</strong> Hemp provides strong fibers for ropes, textiles, and biodegradable products.<br><br>
+            <strong>Season:</strong> Sown in spring or early summer.<br><br>
+            <strong>Soil:</strong> Well-drained loamy soils with pH 6-7.5.<br><br>
+            <strong>Growth Cycle:</strong> 90-120 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing in rows.<br><br>
+            <strong>Watering:</strong> Moderate moisture, avoid waterlogging.<br><br>
+            <strong>Pest Management:</strong> Generally pest-resistant, watch for mildew.<br><br>
+            <strong>Harvest:</strong> Harvest mature stalks and perform retting for fiber extraction.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://i.pinimg.com/736x/d5/52/60/d55260e0535f5e30de0185997fc9bf7c--flax-fiber-flax-plant-garden.jpg" alt="Flax">
+        </div>
+        <div class="crop-details">
+            <h1>Flax</h1>
+            <strong>Overview:</strong> Flax is grown for linen and linseed oil, providing strong, fine fibers.<br><br>
+            <strong>Season:</strong> Sown in early spring.<br><br>
+            <strong>Soil:</strong> Fertile, well-drained loamy soils.<br><br>
+            <strong>Growth Cycle:</strong> 90-110 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing in rows.<br><br>
+            <strong>Watering:</strong> Consistent moisture needed during early growth.<br><br>
+            <strong>Pest Management:</strong> Monitor for wilt and rust diseases.<br><br>
+            <strong>Harvest:</strong> Harvest when capsules turn brown and dry.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://keys.lucidcentral.org/keys/v3/eafrinet/weeds/key/weeds/Media/Html/images/Agave_sisalana_(Sisal)/agave_sisalana27.jpg" alt="Sisal">
+        </div>
+        <div class="crop-details">
+            <h1>Sisal</h1>
+            <strong>Overview:</strong> Sisal produces stiff fibers used in ropes, mats, and industrial products.<br><br>
+            <strong>Season:</strong> Planted year-round in warm climates.<br><br>
+            <strong>Soil:</strong> Sandy, well-drained soils.<br><br>
+            <strong>Growth Cycle:</strong> 2-3 years before first harvest.<br><br>
+            <strong>Seed Cycle:</strong> Propagated using suckers and bulbils.<br><br>
+            <strong>Watering:</strong> Minimal, drought-tolerant.<br><br>
+            <strong>Pest Management:</strong> Watch for weevils and fungal diseases.<br><br>
+            <strong>Harvest:</strong> Leaves are cut and fibers extracted using decortication.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://thumbs.dreamstime.com/z/fresh-kenaf-plant-up-close-street-close-up-fresh-kenaf-plant-331671809.jpg?w=576" alt="Kenaf">
+        </div>
+        <div class="crop-details">
+            <h1>Kenaf</h1>
+            <strong>Overview:</strong> Kenaf is used in the production of rope, paper, and fiber boards.<br><br>
+            <strong>Season:</strong> Sown in spring after frost.<br><br>
+            <strong>Soil:</strong> Fertile, well-drained loam.<br><br>
+            <strong>Growth Cycle:</strong> 120-150 days.<br><br>
+            <strong>Seed Cycle:</strong> Direct sowing.<br><br>
+            <strong>Watering:</strong> Requires moderate moisture.<br><br>
+            <strong>Pest Management:</strong> Monitor for insect pests and diseases.<br><br>
+            <strong>Harvest:</strong> Harvest when stems mature, perform retting for fiber extraction.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://cocoandcoir.com/wp-content/uploads/2022/03/coco-basket-liner-context-closeup-web.jpg" alt="Coir">
+        </div>
+        <div class="crop-details">
+            <h1>Coir</h1>
+            <strong>Overview:</strong> Coir is obtained from coconut husks, used for ropes, mats, and brushes.<br><br>
+            <strong>Season:</strong> Harvested year-round from coconut trees.<br><br>
+            <strong>Soil:</strong> Coastal sandy soils.<br><br>
+            <strong>Growth Cycle:</strong> Continuous harvest from coconut palms.<br><br>
+            <strong>Seed Cycle:</strong> Not applicable (from coconut husk).<br><br>
+            <strong>Watering:</strong> Requires good moisture levels for coconut palms.<br><br>
+            <strong>Pest Management:</strong> Monitor for coconut pests like beetles.<br><br>
+            <strong>Harvest:</strong> Husk processed to extract fiber.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/ramie-plant-selena-wagner.jpg" alt="Ramie">
+        </div>
+        <div class="crop-details">
+            <h1>Ramie</h1>
+            <strong>Overview:</strong> Ramie yields strong fibers used in textiles and blending with cotton.<br><br>
+            <strong>Season:</strong> Sown in spring.<br><br>
+            <strong>Soil:</strong> Fertile, well-drained loamy soils.<br><br>
+            <strong>Growth Cycle:</strong> Multiple harvests per year, with 60-70 days per cycle.<br><br>
+            <strong>Seed Cycle:</strong> Propagated using stem cuttings.<br><br>
+            <strong>Watering:</strong> Requires good moisture for optimal yield.<br><br>
+            <strong>Pest Management:</strong> Watch for leaf-eating insects.<br><br>
+            <strong>Harvest:</strong> Harvest mature stems and extract fiber.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2021/9/VH/LE/RC/87355900/natural-banana-fiber-1000x1000.jpeg" alt="Banana Fiber">
+        </div>
+        <div class="crop-details">
+            <h1>Banana Fiber</h1>
+            <strong>Overview:</strong> Banana fiber is extracted from pseudo-stems and used in textiles and handicrafts.<br><br>
+            <strong>Season:</strong> Harvested post-fruiting.<br><br>
+            <strong>Soil:</strong> Fertile, well-drained soils.<br><br>
+            <strong>Growth Cycle:</strong> 10-12 months for banana plant growth.<br><br>
+            <strong>Seed Cycle:</strong> Not applicable (fiber from pseudo-stems).<br><br>
+            <strong>Watering:</strong> Requires regular moisture for growth.<br><br>
+            <strong>Pest Management:</strong> Monitor for banana-specific pests.<br><br>
+            <strong>Harvest:</strong> Pseudo-stems cut and processed for fiber extraction.
+        </div>
+    </div>
+
+    <div class="crop-box">
+        <div class="crop-image">
+            <img src="https://i.pinimg.com/originals/88/9e/91/889e917034756701df81921342fcbee1.jpg" alt="Agave">
+        </div>
+        <div class="crop-details">
+            <h1>Agave</h1>
+            <strong>Overview:</strong> Agave produces strong fibers known as sisal, used for ropes and textiles.<br><br>
+            <strong>Season:</strong> Can be planted year-round.<br><br>
+            <strong>Soil:</strong> Sandy, well-drained soils.<br><br>
+            <strong>Growth Cycle:</strong> 4-6 years for maturity.<br><br>
+            <strong>Seed Cycle:</strong> Propagated using bulbils.<br><br>
+            <strong>Watering:</strong> Drought-tolerant, minimal watering required.<br><br>
+            <strong>Pest Management:</strong> Monitor for weevils and fungal issues.<br><br>
+            <strong>Harvest:</strong> Leaves harvested and fibers extracted using decortication.
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
