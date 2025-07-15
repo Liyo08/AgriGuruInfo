@@ -1,0 +1,129 @@
+/* Modern, clean styling for your Weather Checker */
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+select {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    outline: none;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 300px;
+    background-color: #fff;
+    transition: transform 0.2s ease;
+}
+
+select:hover {
+    transform: scale(1.02);
+}
+
+#weatherResult {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    padding: 20px;
+    width: 90%;
+    max-width: 640px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    backdrop-filter: blur(6px);
+}
+
+#weatherResult h3 {
+    margin-top: 0;
+    color: #444;
+}
+
+#weatherResult p {
+    font-size: 1rem;
+    margin: 8px 0;
+    color: #555;
+}
+
+#weatherResult img {
+    width: 80px;
+    height: 80px;
+}
+.forecast-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+}
+.forecast-card {
+    color: #333; /* dark gray for readability */
+}
+.forecast-card strong {
+    font-weight: 600;
+    color: #111;
+}
+.forecast-card {
+    font-size: 0.9rem;
+}
+.forecast-card strong {
+    font-size: 1rem;
+}
+
+.forecast-card {
+    flex: 0 0 auto;
+ background: rgba(255,255,255,0.7);
+
+    border-radius: 12px;
+    padding: 10px;
+    text-align: center;
+    min-width: 100px;
+    color: #000000;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.forecast-card img {
+    width: 50px;
+    height: 50px;
+}.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    select {
+        font-size: 0.95rem;
+    }
+
+    #weatherResult {
+        padding: 15px;
+    }
+}
