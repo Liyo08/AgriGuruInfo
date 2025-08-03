@@ -32,7 +32,4 @@ Participating in the hackathon helped sharpen our problem-solving skills under p
 
 ---
 
- Repository**
-   ```bash
-   git clone https://github.com/your-username/agriguru.git
-   cd agriguru
+
