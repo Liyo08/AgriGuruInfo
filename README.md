@@ -1,6 +1,6 @@
 # 🌾 AgriGuru - Smart Agriculture Assistant
 
-### AgriGuru is a web-based solution developed to bridge the gap between modern technology and traditional farming practices. Built during a Infosys Global Hackathon 2025, AgriGuru provides a centralized platform for farmers to access region-specific crop suggestions, weather updates, fertilizer recommendations, and expert support — all tailored to improve productivity and sustainability in agriculture.
+AgriGuru is a web-based solution developed to bridge the gap between modern technology and traditional farming practices. Built during a Infosys Global Hackathon 2025, AgriGuru provides a centralized platform for farmers to access region-specific crop suggestions, weather updates, fertilizer recommendations, and expert support — all tailored to improve productivity and sustainability in agriculture.
 
 ---
 
